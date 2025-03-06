@@ -1,3 +1,55 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.toast-success {
+    background-color: #28a745 !important; 
+    position: fixed;
+    padding: 1%;
+    width: 255px;
+    top:0;
+    right: 15px;
+    color: white !important;
+    font-size: 16px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.toast-error {
+    position: fixed;
+    padding: 1%;
+    width: 255px;
+    top:0;
+    right: 15px;
+    background-color: #dc3545 !important; 
+    color: white !important;
+    font-size: 16px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.toast-info {
+    background-color: #17a2b8 !important;
+    color: white !important;
+    font-size: 16px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.toast-warning {
+    background-color: #ffc107 !important; 
+    color: black !important;
+    font-size: 16px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.toast-progress {
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    height: 4px !important;
+}
+
+#toast-container > div {
+    margin-bottom: 8px !important;
+}

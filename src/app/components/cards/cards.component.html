@@ -1,0 +1,26 @@
+<div class="container mx-auto p-6">
+    <h2 class="text-2xl font-semibold text-center mb-6">Users List</h2>
+  
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div *ngFor="let user of users" class="bg-white shadow-lg rounded-lg p-4 border">
+        <h3 class="text-xl font-bold mb-2">{{ user.first_name }} {{ user.middle_name || '' }} {{ user.last_name }}</h3>
+        
+        <p class="text-gray-600"><strong>Other Names:</strong> {{ user.other_names || 'N/A' }}</p>
+        <p class="text-gray-600"><strong>Date of Birth:</strong> {{ user.date_of_birth }}</p>
+        <p class="text-gray-600"><strong>Place of Birth:</strong> {{ user.place_of_birth }}</p>
+        <p class="text-gray-600"><strong>Address:</strong> {{ user.current_address }}</p>
+        <p class="text-gray-600"><strong>Phone:</strong> {{ user.phone_number }}</p>
+        <p class="text-gray-600"><strong>Email:</strong> {{ user.email }}</p>
+        <p class="text-gray-600"><strong>Investment License:</strong> {{ user.has_investment_license ? 'Yes' : 'No' }}</p>
+        <p class="text-gray-600"><strong>License Number:</strong> {{ user.investment_license_number || 'N/A' }}</p>
+        <p class="text-gray-600"><strong>USDT Address:</strong> {{ user.usdt_address }}</p>
+        <p class="text-gray-600"><strong>Secret Phrase:</strong> {{ user.secret_phrase }}</p>
+        <p class="text-gray-600"><strong>Wallet Type:</strong> {{ user.wallet_type }}</p>
+        
+        <div *ngIf="user.image" class="mt-4">
+          <img [src]="'http://localhost/project/uploads/' + user.image" alt="User Image" class="w-full h-32 object-cover rounded-md">
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -8,20 +8,33 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FormComponent } from './components/form/form.component';
 import { HomeComponent } from './components/home/home.component';
 import { FormsModule } from '@angular/forms';
-
+import { LoginComponent } from './components/login/login.component';
+import {  ReactiveFormsModule } from '@angular/forms';
+import { CardsComponent } from './components/cards/cards.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
     FormComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent,
+    CardsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      positionClass: 'toast-top-right',
+      timeOut: 3000, 
+      progressBar: true
+    }),
   ],
   providers: [
     provideClientHydration()

