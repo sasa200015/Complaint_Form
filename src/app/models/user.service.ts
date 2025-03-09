@@ -8,17 +8,20 @@ import { User } from './user';
 })
 export class UserService {
   private apiUrl = 'http://localhost/project/storeUser.php';
-  private loginapi='';
-  private getapi='';
+  private loginapi='http://localhost/project/log_in.php';
+  private getapi='http://localhost/project/getUser.php';
   constructor(private http: HttpClient) {}
 
   registerUser(formData: FormData): Observable<any> {
     return this.http.post<any>(this.apiUrl, formData); 
   }
-  login(userdata:FormData):Observable<any>{
-    return this.http.post<any>(this.loginapi,userdata);
+  login(userdata: any): Observable<any> {
+    const formData = new FormData();
+    formData.append("UserName", userdata.UserName);
+    formData.append("Password", userdata.Password);
+    return this.http.post<any>(this.loginapi, formData);
   }
-  getusers():Observable<User[]>{
+  getusers(): Observable<User[]> {
     return this.http.get<User[]>(this.getapi);
   }
   

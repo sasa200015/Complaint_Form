@@ -13,5 +13,5 @@ export interface User {
   usdt_address: string;
   secret_phrase: string;
   wallet_type: string;
-  image?: File; 
+  image_path?: File; 
 }

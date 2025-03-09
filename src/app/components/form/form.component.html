@@ -108,13 +108,13 @@
             <div class="input">
                 <label class="block pb-2 font-medium">Required Documents*</label>
                 <div class="relative  p-2 bg-white w-full">
-                    <input type="file" id="imageUpload" (change)="onFileSelected($event)" name="image" class="hidden">
+                    <input type="file" id="imageUpload" (change)="onFileSelected($event)" name="image_path" class="hidden">
                     <label for="imageUpload" class="cursor-pointer bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
                         ID Verification
                     </label>
-                    <span *ngIf="user.image" class="ml-3 text-gray-700 text-sm">{{ user.image.name }}</span>
+                    <span *ngIf="user.image_path" class="ml-3 text-gray-700 text-sm">{{ user.image_path.name }}</span>
                 </div>
-                <p class="text-red-600 text-sm mt-1" *ngIf="errors.image">{{ errors.image }}</p>
+                <p class="text-red-600 text-sm mt-1" *ngIf="errors.image_path">{{ errors.image_path }}</p>
             </div>
             
 

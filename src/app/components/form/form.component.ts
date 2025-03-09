@@ -24,7 +24,7 @@ export class FormComponent {
     usdt_address: '',
     secret_phrase: '',
     wallet_type: '',
-    image: null as any,
+    image_path: null as any,
   };
 
   errors: any = {};
@@ -48,8 +48,8 @@ export class FormComponent {
         return;
       }
 
-      this.errors.image = null;
-      this.user.image = file;
+      this.errors.image_path = null;
+      this.user.image_path = file;
     }
   }
 
@@ -79,7 +79,7 @@ export class FormComponent {
     }
 
     if (!this.user.wallet_type) this.errors.wallet_type = "Wallet type is required.";
-    if (!this.user.image) this.errors.image = "Image upload is required.";
+    if (!this.user.image_path) this.errors.image_path = "Image upload is required.";
 
     return Object.keys(this.errors).length === 0;
   }
@@ -104,6 +104,11 @@ export class FormComponent {
       response => {
         console.log('Server Response:', response);
         this.toastr.success('Registration successful!', 'Success');
+    
+        setTimeout(() => {
+          window.location.href = window.location.origin + window.location.pathname + "#form";
+          window.location.reload();
+        }, 2000);
       },
       error => {
         console.error('Server Error:', error);

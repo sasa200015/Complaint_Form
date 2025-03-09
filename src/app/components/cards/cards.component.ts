@@ -13,13 +13,14 @@ export class CardsComponent {
   constructor(private userService: UserService) {}
 
   ngOnInit(): void {
-    this.userService.getusers().subscribe(
-      (data: User[]) => {
-        this.users = data;
+    this.userService.getusers().subscribe({
+      next: (response) => {
+        console.log('Fetched users:', response); 
+        this.users = response;
       },
-      (error) => {
+      error: (error) => {
         console.error('Error fetching users:', error);
       }
-    );
+    });
   }
 }
